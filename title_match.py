@@ -5,4 +5,4 @@ if __name__ == "__main__":
     patterns = r'.+\s\(\d{4}\)'
     matches = re.findall(patterns, test_string)
     print('Search results: ', matches)
-#update all
+
