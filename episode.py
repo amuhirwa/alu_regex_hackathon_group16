@@ -1,7 +1,7 @@
 import re
 
 # Define the pattern
-episode_title_pattern = r"[A-Za-z\s]+ S\d{2}E\d{2}: [A-Za-z\s]+"
+episode_title_pattern = r".+ S\d{2}E\d{2}:.+"
 
 # Test strings
 test_strings = [
@@ -20,6 +20,6 @@ test_strings = [
 # Test the pattern
 for test_string in test_strings:
     if re.match(episode_title_pattern, test_string):
-        print(f"{test_string} matches the pattern")
+        print(f"{test_string}: matches the pattern")
     else:
-        print(f"{test_string} does not match the pattern")
+        print(f"{test_string}: does not match the pattern")
