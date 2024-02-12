@@ -1,11 +1,19 @@
 import re
 
-if __name__ == "__main__":
-    test_string = input("Enter your data: ")
-    patterns = r'@w+'
-    matches = re.findall(patterns, test_string)
-    if matches:
-        print('Search results: ', matches)
-    else:
-        print('No match found!')
+# Test string
+test_string = """Twitter Handles:
+#NBA
+@elonmusk
+@NASA
+@NatGeo
+@BTS_twt
+@GretaThunberg"""
 
+# Regex pattern to match twitter usernames
+usernames_pattern = re.compile(r'@\w+')
+
+# Test to see if pattern matches them correctly
+if len(usernames_pattern.findall(test_string)) != 0:
+    print(f"Matches: {usernames_pattern.findall(test_string)}")
+else:
+    print(f"{test_string} has no matches")

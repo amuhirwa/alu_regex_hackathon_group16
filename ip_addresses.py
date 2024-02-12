@@ -1,16 +1,16 @@
 import re
 
 # Test string
-test_string = """Movie Titles:
-Avengers (12)
-The Shawshank Redemption (1994)
-Casablanca (1942)
-The Lord of the Rings: The Fellowship of the Ring (2001)
-Spirited Away (2001)
-Parasite (2019)"""
+test_string = """IP Addresses:
+256.2.134.282
+192.168.1.100
+10.0.0.1
+8.8.8.8
+172.16.0.1
+255.255.255.256"""
 
 # Regex pattern to match Titles
-titles_pattern = re.compile(r'.+ \(\d{4}\)')
+titles_pattern = re.compile(r'((?:(?:[01]\d{2}|2[0-4]\d|25[0-5]|\d{1,2})\.){3}(?:[01]\d{2}|2[0-4]\d|25[0-5]|\d{1,2}(?=\D|$)))')
 
 # Test to see if pattern matches them correctly
 if len(titles_pattern.findall(test_string)) != 0:

@@ -1,6 +1,6 @@
 import re
 
-# Define the pattern
+# The pattern
 episode_title_pattern = r".+ S\d{2}E\d{2}:.+"
 
 # Test strings
@@ -14,7 +14,8 @@ test_strings = [
     "Sherlock S01E01: A Study in Pink",
     "The Crown S04E10: War",
     "Black Mirror S03E01: Nosedive",
-    "The Simpsons S06E07: Bart's Girlfriend"
+    "The Simpsons S06E07: Bart's Girlfriend",
+    "The Simpsons S6E07: Bart's Girlfriend"
 ]
 
 # Test the pattern
